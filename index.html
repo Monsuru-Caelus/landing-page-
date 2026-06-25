@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caelus Industries</title>
+
+  <!-- Typeface: Ojuju -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= ROOT ================= -->
+  <div class="page">
+
+    <!-- ============ TOP CONTAINER: SPACE ============ -->
+    <section class="space">
+
+      <!-- animated starfield (drawn by JS) -->
+      <canvas id="starfield" class="starfield"></canvas>
+
+      <!-- depth + colour overlays -->
+      <div class="overlay overlay--violet"></div>
+      <div class="overlay overlay--vignette"></div>
+
+      <!-- header -->
+      <header class="header">
+        <div class="wordmark">Caelus&nbsp;Industries</div>
+        <div class="header__right">
+          <div class="badge">
+            <span class="badge__dot"></span>
+            <span class="badge__label">In Stealth</span>
+          </div>
+          <div class="copyright">&copy; 2026 Caelus Industries</div>
+        </div>
+      </header>
+
+      <!-- main statement -->
+      <main class="statement">
+        <div class="eyebrow">
+          <span class="eyebrow__dot"></span>
+          <span class="eyebrow__label">Maritime Infrastructure</span>
+        </div>
+        <h1 class="headline">Autonomous maritime workforce for the ocean.</h1>
+        <p class="subline">Defend, maintain, monitor, and create new financial markets from maritime assets.</p>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer">
+        <a class="email" href="mailto:Hello@caelusindustries.com">Hello@caelusindustries.com</a>
+      </footer>
+
+      <!-- bottom fade: starfield melts into the seam -->
+      <div class="space__fade"></div>
+    </section>
+
+    <!-- ============ BOTTOM CONTAINER: OCEAN ============ -->
+    <section class="ocean">
+      <!-- two layers cross-dissolve for a seamless loop (see logic.js) -->
+      <video id="ocean-a" class="ocean__video" autoplay loop muted playsinline
+             src="uploads/ocean.mp4"></video>
+      <video id="ocean-b" class="ocean__video ocean__video--top" autoplay loop muted playsinline
+             src="uploads/ocean.mp4"></video>
+
+      <!-- top fade: video rises out of darkness, endless-horizon illusion -->
+      <div class="ocean__fade"></div>
+    </section>
+
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>
